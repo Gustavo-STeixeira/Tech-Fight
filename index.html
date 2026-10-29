@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Senac Pro - Tech Fight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Tech Fight</h1>
+    <p>Senac Pro 2026 · UC4 Front-end</p>
+  </header>
+
+  <main class="cabine">
+    <section class="hud" aria-label="Placar da luta">
+      <div class="lutador">
+        <span class="nome">DEV</span>
+        <div class="barra" id="barra-dev" role="progressbar" aria-label="Vida do DEV" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+          <div id="vida-dev" class="vida"></div>
+        </div>
+        <span id="vit-dev" class="vitorias">☆☆</span>
+      </div>
+      <div class="centro">
+        <span id="tempo" class="tempo">60</span>
+        <span class="pontos">PTS <span id="pontos">0</span></span>
+      </div>
+      <div class="lutador inverso">
+        <span class="nome">BUG</span>
+        <div class="barra" id="barra-bug" role="progressbar" aria-label="Vida do BUG" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+          <div id="vida-bug" class="vida"></div>
+        </div>
+        <span id="vit-bug" class="vitorias">☆☆</span>
+      </div>
+    </section>
+
+    <section class="tela">
+      <canvas id="jogo" width="384" height="216" aria-label="Arena de luta"></canvas>
+      <p id="anuncio" class="anuncio" aria-live="assertive"></p>
+      <div id="painel" class="painel">
+        <h2 id="painel-titulo">DOM FIGHTER</h2>
+        <p id="painel-texto">Derrote o BUG em melhor de 3 rounds.</p>
+        <button id="btn-iniciar" type="button">Iniciar</button>
+        <p class="pisca">INSERT COIN</p>
+      </div>
+    </section>
+
+    <p class="dica">← → mover · ↑ pular · ↓ ou D defender · A soco · S chute</p>
+
+    <section class="controles" aria-label="Controles de toque">
+      <button type="button" data-acao="esq">←</button>
+      <button type="button" data-acao="dir">→</button>
+      <button type="button" data-acao="pular">Pular</button>
+      <button type="button" data-acao="defender">Defesa</button>
+      <button type="button" data-acao="soco">Soco</button>
+      <button type="button" data-acao="chute">Chute</button>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto Senac Pro · UC4 Desenvolvimento Front-end · Faculdade Senac Contagem</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
